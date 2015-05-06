@@ -7,7 +7,7 @@ module.exports = function(swig) {
     } else {
       link_name = "Page "+doc.url_name;
     }
-    return "<a href='"+doc.full_route+"'>"+link_name+"</a>";
+    return "<a href='/"+doc.full_route+"'>"+link_name+"</a>";
   };
   page_link.safe = true;
 
