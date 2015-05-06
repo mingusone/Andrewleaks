@@ -1,0 +1,33 @@
+<!-- {% extends "layout.html" %}
+
+{% block content %}
+    <div>
+    	
+        
+        
+        <h1> {{doc.title}} </h1>
+        <h4> {{doc.body}} </h4>
+    </div>
+{% endblock %}
+
+{% block title %}
+WIKILEAKS
+{% endblock %} -->
+
+
+{% extends "layout.html" %}
+{% block title %}{{doc.title}}{% endblock %}
+
+{% block content %}
+<!-- You will need to remove the space between the two opening curly braces below. The space is the result of a bug that we are working to fix! -->
+<h1>{{doc.title}}</h1>
+<h4>{{ doc.body | marked }}</h4>
+
+<div>
+{% for tag in doc.tags %}
+
+	 <button> {{ tag }} </button> 
+{% endfor %}
+
+</div>
+{% endblock %}

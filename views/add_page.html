@@ -1,0 +1,25 @@
+<!-- about_us.html -->
+{% extends "layout.html" %}
+
+{% block title %}WikiStack - About Us{% endblock %}
+
+{% block content %}
+
+<h1> Add a Page </h1>
+<br>
+
+<form action= "/add/submit" method= "post">
+
+	<h3> Page Title </h3>
+	<input type= "text" name="pageTitle"/>
+
+	<h3> Page Content </h3>
+	<input type= "text" name="pageContent"/>
+
+	<h3> Tag (Separate by spaces) </h3>
+	<input type= "text" name="pageTag"/>
+	
+	<br>
+	<button type="submit">Submit </button>
+</form>
+{% endblock %}
